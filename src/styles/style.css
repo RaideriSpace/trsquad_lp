@@ -1,0 +1,255 @@
+    body {
+      font-family: 'Poppins', 'Inter', Arial, sans-serif;
+      padding: 0 80px;
+    }
+
+    h3 {
+        font-weight: bold;
+        color: #092955;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .navbar {
+      background-color: white;
+      height: auto;
+      padding-top: 0;
+      padding-bottom: 0;
+      z-index: 1030;
+    }
+
+    .navbar .nav-item {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        align-self: center;
+    }
+
+    .navbar .container {
+      margin: 0 80px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-brand img {
+      max-height: 60px;
+    }
+
+    .navbar li {
+        font-weight: bold;
+        margin: 0 8px;
+    }
+
+    .btn-danger {
+        font-weight: bold;
+    }
+
+    .whatsapp-header {
+        color: white;
+        background-color: #16BE96;
+        margin: 0 10px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        padding: 9px 0 0 0;
+        font-size: 30px;
+    }
+
+    .hero {
+        background: url('/src/assets/img/Rectangle 5.svg') no-repeat center center;
+        background-size: cover;
+        color: #092955;
+        text-align: start;
+        margin-top: 86px;
+        min-height: 600px;
+        font-size: 1.1em;
+        font-weight: 550;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    .hero .hero-container {
+        padding: 2rem;
+        max-width: auto;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      font-weight: bold;
+      color: #b62c3a;
+    }
+    .hero h2 {
+      color: #092955;
+      font-size: 2.8em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .hero .btn-danger {
+      padding-top: 13px;
+      height: 51px;
+      width: 261px;
+    }
+
+    .section-title {
+      margin-top: 60px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .text-red {
+        color: #b62c3a;
+    }
+
+    .container {
+  padding: 40px 15px;
+    }
+
+    .section-title {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+    }
+
+    .hero-container{
+        margin: 0px 0;
+    }
+
+    .feature-box {
+      background-color: #88A7AA50;
+      padding: 16px 8px;
+      border-radius: 8px;
+      margin: 16px;
+      height: 100%;
+    }
+
+    .works {
+       background-color: white;
+    }
+
+    .works h5 {
+        color: #b62c3a;
+        font-weight: bold;
+    }
+
+    .works p {
+        text-align: start;
+    }
+
+    .centerImg {
+        display: block;
+        margin: 32px auto;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        }
+
+    .serviceIcon {
+        display: flex; /* novo */
+        justify-content: center; /* novo */
+        align-items: center; /* novo */
+        height: 100px;
+        background-color: #01B4C9;
+        border-radius: 8px;
+        margin: 8px 0;
+    }
+    .serviceIcon img {
+        max-height: 80%;
+        max-width: 80%;
+    }
+
+    .red-section {
+      background-color: #b30000;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    .red-section h3{
+      color: white;
+      padding: 16px 20px;
+      text-align: center;
+    }
+
+    .red-section .col-xl-9 {
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+
+    .contact {
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+
+    .whats {
+        color: #16BE96;
+    }
+
+    .insta {
+        color: #545776;
+    }
+
+    .icon {
+        font-size: 1.4em;
+    }
+
+    .contact-section {
+        text-align: center;
+    }
+
+    .contact-section form input,
+    .contact-section form textarea {
+        margin-bottom: 15px;
+        padding: 10px;
+        border-radius: 16px;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      color: #545776;
+      padding: 20px;
+      font-size: 0.875rem;
+      background-color: #f8f9fa;
+    }
+
+    @media (min-width: 992px) {
+        .navbar {
+            height: 86px;
+        }
+
+        .navbar .container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            max-height: 60px;
+        }
+    }
+
+    @media (max-width: 992px) {
+
+        .navbar{
+            justify-content: center;
+        }
+
+        .navbar .container {
+            padding: 0px;
+            margin: 0 16px;
+            justify-content: space-between;
+        }
+    }
