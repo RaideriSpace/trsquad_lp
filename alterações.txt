@@ -1,0 +1,107 @@
+formHandler.js
+
+import { Modal } from "bootstrap";
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("#form-contato");
+  const modalElement = document.getElementById("formModal");
+  const modal = new Modal(modalElement);
+
+  const button = document.querySelector("#btn-enviar");
+  const spinner = button.querySelector(".spinner-border");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const inputs = form.querySelectorAll("input, textarea");
+    let formValido = true;
+
+    // Limpa validações anteriores
+    inputs.forEach(input => {
+      input.classList.remove("is-invalid");
+      const mensagemErro = input.nextElementSibling;
+      if (mensagemErro && mensagemErro.classList.contains("invalid-feedback")) {
+        mensagemErro.remove();
+      }
+    });
+
+    // Validação básica
+    inputs.forEach(input => {
+      if (!input.value.trim()) {
+        formValido = false;
+        input.classList.add("is-invalid");
+
+        const msg = document.createElement("div");
+        msg.className = "invalid-feedback";
+        const msgText = input.dataset.error || "Este campo é obrigatório.";
+        msg.textContent = msgText;
+        input.insertAdjacentElement("afterend", msg);
+      }
+    });
+
+    if (!formValido) return;
+
+    spinner.classList.remove("d-none");
+    button.setAttribute("disabled", true);
+
+    setTimeout(() => {
+      form.reset();
+      spinner.classList.add("d-none");
+      button.removeAttribute("disabled");
+      modal.show(); // Agora funciona corretamente
+    }, 2000);
+  });
+});
+
+
+index.html:
+
+ <!-- Formulario de contato ES
+    <div class="row justify-content-center" id="form-contato">
+      <div class="col-lg-8">
+        <form id="form-contato" class="form">
+          <div class="row">
+
+            <div class="col-md-4">
+              <input type="text" class="form-control" placeholder="Nome ou Empresa" data-error="Digite seu nome completo ou da sua empresa.">
+            </div>
+
+            <div class="col-md-4">
+              <input type="email" class="form-control" placeholder="E-mail" data-error="Digite um e-mail válido.">
+            </div>
+
+            <div class="col-md-4">
+              <input type="tel" class="form-control" placeholder="Celular" data-error="Digite um número válido.">
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-12">
+              <textarea class="form-control" rows="4" placeholder="Mensagem"></textarea>
+            </div>
+          </div>
+
+          Botão de enviar
+          <button type="submit" class="btn btn-danger" id="btn-enviar">
+            <span class="spinner-border spinner-border-sm me-2 d-none" role="status" aria-hidden="true"></span>
+            <span>Enviar <i class="fas fa-paper-plane"></i></span>
+          </button>
+
+        </form>
+      </div>
+    </div> -->
+
+    <!-- Modal de confirmação ES
+  <div class="modal fade" id="formModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Mensagem enviada!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Obrigado por entrar em contato. Retornaremos em breve.</p>
+        </div>
+      </div>
+    </div>
+  </div> -->

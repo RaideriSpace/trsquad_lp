@@ -1,268 +1,353 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>TR Squad - Tecnologia Renovada</title>
+    <title>TR Squad - Tecnologia Renovada</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./src/styles/style.css">
 
-  <script src="/src/script/modal.js"></script>
+  </head>
+  <body>
 
-</head>
-<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+      <div class="container-fluid">
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
-    <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="/src/assets/img/Logo.svg" alt="Logo Tecnologia Renovada">
+        </a>
 
-      <!-- Logo -->
-      <a class="navbar-brand" href="#">
-        <img src="/src/assets/img/Logo.svg" alt="Logo Tecnologia Renovada">
-      </a>
+        <!-- Botão hamburguer -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <!-- Botão hamburguer -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Botões de ação -->
-      <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#trsquad-red">TR Squad</a></li>
-          <li class="nav-item"><a class="nav-link" href="#diferencial">Diferencial</a></li>
-          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
-          <li class="nav-item"><a class="btn btn-danger" href="#contato">Contato</a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://wa.me/551151168172" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp whatsapp-header"></i></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Seção da hero img -->
-  <section class="hero">
-    <div class="container hero-container">
-      <h1> Suporte Técnico instantâneo</h1>
-      <h2> A solução está ao seu lado</h2>
-      <p> Cansado de esperar horas por ajuda técnica? <br>
-        A TR Squad traz o suporte para perto de você. Com nossa equipe altamente qualificada, oferecemos assistência imediata e <br> 
-        personalizada para suas necessidades tecnológicas.</p>
-
-      <!-- CTA -->
-      <a href="#" class="btn btn-danger">Resolva Seu Problema Hoje</a>
-    </div>
-  </section>
-
-  <!-- Seção de diferencial -->
-  <section class="container" id="diferencial">
-    <div class="section-title">
-      <h3>Por que Escolher a TR Squad?</h3>
-    </div>
-
-    <!-- Itens de diferencial -->
-    <div class="row text-center justify-content-center">
-
-      <!-- Item 1 -->
-      <div class="col-md-3 feature-box">
-        <strong class="text-red">Proximidade e Agilidade</strong>
-        <p>Suporte técnico instantâneo  ao seu alcance, pronto para atender suas necessidades no momento exato.</p>
-      </div>
-
-      <!-- Item 2 -->
-      <div class="col-md-3 feature-box">
-        <strong class="text-red">Eficiência Sob Demanda</strong>
-        <p>Resolvemos seus desafios tecnológicos com rapidez e precisão, minimizando o tempo de inatividade.</p>
-      </div>
-
-      <!-- Item 3 -->
-      <div class="col-md-3 feature-box">
-        <strong class="text-red">Experiência Comprovada</strong>
-        <p>Com 25 anos no mercado, oferecemos soluções personalizadas e eficientes que acompanham o ritmo do seu negócio.</p>
-      </div>
-
-      <!-- Item 4 -->
-      <div class="col-md-3 feature-box">
-        <strong class="text-red">Confiança e Transparência</strong>
-        <p>Construímos relacionamentos sólidos através de comunicação clara e aberta em todas as etapas.</p>
-      </div>
-
-      <!-- Item 5 -->
-      <div class="col-md-3 feature-box">
-        <strong class="text-red">Inovação Constante</strong>
-        <p>Transformamos problemas em oportunidades, mantendo sua empresa sempre um passo à frente.</p>
-      </div>
-
-      <!-- Item 6 -->
-      <div class="col-md-3 feature-box">
-        <strong class="text-red">Comprometimento</strong>
-        <p>Atuamos com integridade e responsabilidade, garantindo soluções que respeitam seus valores e objetivos.</p>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Imagem de quebra -->
-  <img class="centerImg" src="./src/assets/img/Imagem.svg" alt="Imagem de Centro">
-
-  <!-- Seção de serviços -->
-  <section class="container" id="servicos">
-    <div class="section-title">
-      <h3>Soluções Tecnológicas Sob Demanda</h3>
-      <p><strong>Nossos Principais Serviços</strong></p>
-    </div>
-
-    <!-- Itens de serviços -->
-    <div class="row text-center justify-content-center">
-      
-      <!-- Item 1 -->
-      <div class="col-md-3 feature-box works">
-        <h5>Suporte Técnico Instantâneo</h5>
-        <div class="serviceIcon"> <img src="./src/assets/icons/manufacturing.svg"> </div>
-        <p>Resolução rápida e precisa de problemas, mantendo seu negócio sempre em movimento.</p>
-      </div>
-
-      <!-- Item 2 -->
-      <div class="col-md-3 feature-box works">
-        <h5>Consultoria Avançada</h5>
-        <div class="serviceIcon"> <img src="./src/assets/icons/data_table.svg"> </div>
-        <p>Otimize sua infraestrutura com nossa expertise de 25 anos, incluindo mapeamento detalhado e soluções customizadas para servidores.</p>
-      </div>
-
-      <!-- Item 3 -->
-      <div class="col-md-3 feature-box works">
-        <h5>Firewall de Última Geração</h5>
-        <div class="serviceIcon"> <img src="./src/assets/icons/encrypted.svg"> </div>
-        <p>Blindagem robusta contra ameaças cibernéticas, garantindo a segurança dos seus dados críticos.</p>
-      </div>
-
-      <!-- Item 4 -->
-      <div class="col-md-3 feature-box works">
-        <h5>VPN e Rede Segura</h5>
-        <div class="serviceIcon"> <img src="./src/assets/icons/vpn_lock_2.svg"> </div>
-        <p>Conexões confiáveis e protegidas, permitindo trabalho remoto eficiente de qualquer lugar do mundo .</p>
-      </div>
-
-      <!-- Item 5 -->
-      <div class="col-md-3 feature-box works">
-        <h5>Instalação de Softwares</h5>
-        <div class="serviceIcon"> <img src="./src/assets/icons/install_desktop.svg"> </div>
-        <p>Implementação se complicações de ferramentas essenciais, alinhadas às necessidade sespecíficas do seu negócio.</p>
-      </div>
-
-      <!-- Item 6 -->
-      <div class="col-md-3 feature-box works">
-        <h5>Mapeamento de Soluções</h5>
-        <div class="serviceIcon"> <img src="./src/assets/icons/account_tree.svg"> </div>
-        <p>Análise detalhada e otimização da sua infraestrutura de servidores, maximizando desempenho e eficiência.</p>
-      </div>
-
-    </div>
-  </section>
-  
-  <!-- Seção em vermelho -->
-  <section  id="trsquad-red">
-    <div class="red-section">
-      <div class="row">
-        <div class="col-xl-3">
-          <h3>Na TR Squad, tecnologia é a ferramenta — seu sucesso é o nosso propósito.</h3>
-        </div>
-        <div class="col-xl-9">
-          <h5>Somos parceiros dedicados ao seu sucesso. Nossas soluções são impulsionadas pela inovação e pela inteligência artificial, permitindo-nos adaptar e evoluir conforme suas necessidades.</h5>
+        <!-- Botões de ação -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-sm-auto mb-2">
+            <li class="nav-item"><a class="nav-link" href="#trsquad-red" data-bs-dismiss="collapse">TR Squad</a></li>
+            <li class="nav-item"><a class="nav-link" href="#diferencial" data-bs-dismiss="collapse">Diferencial</a></li>
+            <li class="nav-item"><a class="nav-link" href="#servicos" data-bs-dismiss="collapse">Serviços</a></li>
+            <li class="nav-item"><a class="btn btn-danger" href="#contato" data-bs-dismiss="collapse">Contato</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://wa.me/551151168172" target="_blank" rel="noopener noreferrer" data-bs-dismiss="collapse"><i class="fa-brands fa-whatsapp whatsapp-header"></i></a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- Seção TR Squad -->
-  <section class="trsquad">
-    <div class="row justify-content-center">
+    <!-- Seção da hero img -->
+    <section class="hero">
+      <div class="container hero-container">
+        <h1> Suporte Técnico instantâneo</h1>
+        <h2> A solução está ao seu lado</h2>
+        <p> Cansado de esperar horas por ajuda técnica? <br>
+          A TR Squad traz o suporte para perto de você. Com nossa equipe altamente qualificada, oferecemos assistência imediata e <br> 
+          personalizada para suas necessidades tecnológicas.</p>
 
-      <!-- Imagem -->
-      <div class="col-lg-4 col-md-4">
-        <img class="trsquad-img" src="./src/assets/img/Rectangle 9.svg">
+        <!-- CTA -->
+        <a href="#" class="btn btn-danger">Resolva Seu Problema Hoje</a>
+      </div>
+    </section>
+
+    <!-- Seção de diferencial -->
+    <section class="container" id="diferencial">
+      <div class="section-title">
+        <h3>Por Que Escolher a TR Squad?</h3>
       </div>
 
-      <!-- Texto -->
-      <div class="col-lg-8 col-md-8">
-        <p>Na TR Squad, transformamos desafios tecnológicos em oportunidades de crescimento. Nossa equipe altamente qualificada está sempre ao seu alcance, oferecendo suporte sob demanda e soluções inovadoras que acompanham o ritmo acelerado do seu negócio. Escolha a TR Squad para um parceiro tecnológico que não apenas resolve problemas, mas impulsiona sua empresa para o futuro. Com nossa abordagem ágil e personalizada, garantimos que você esteja sempre um passo à frente no mundo digital.</p>
+      <!-- Itens de diferencial -->
+      <div class="row text-center justify-content-center">
+
+        <!-- Item 1 -->
+        <div class="col-md-3 feature-box hidden-on-load">
+          <strong class="text-red">Proximidade e Agilidade</strong>
+          <p>Suporte técnico instantâneo  ao seu alcance, pronto para atender suas necessidades no momento exato.</p>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col-md-3 feature-box hidden-on-load">
+          <strong class="text-red">Eficiência Sob Demanda</strong>
+          <p>Resolvemos seus desafios tecnológicos com rapidez e precisão, minimizando o tempo de inatividade.</p>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="col-md-3 feature-box hidden-on-load">
+          <strong class="text-red">Inovação Constante</strong>
+          <p>Transformamos problemas em oportunidades, mantendo sua empresa sempre um passo à frente.</p>
+        </div>
+
+        <!-- Item 4 -->
+         <div class="col-md-3 feature-box hidden-on-load">
+          <strong class="text-red">Experiência Comprovada</strong>
+          <p>Com 25 anos no mercado, oferecemos soluções personalizadas e eficientes que acompanham o ritmo do seu negócio.</p>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="col-md-3 feature-box hidden-on-load">
+          <strong class="text-red">Confiança e Transparência</strong>
+          <p>Construímos relacionamentos sólidos através de comunicação clara e aberta em todas as etapas.</p>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="col-md-3 feature-box hidden-on-load">
+          <strong class="text-red">Comprometimento</strong>
+          <p>Atuamos com integridade e responsabilidade, garantindo soluções que respeitam seus valores e objetivos.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Imagem de quebra -->
+    <div class="parallax-img-wrapper">
+      <img src="src/assets/img/Imagem.svg" alt="Imagem Central" class="centerImg">
+    </div>
+
+    <!-- Seção de serviços -->
+    <section class="container" id="servicos">
+      <div class="section-title">
+        <h3>Soluções Tecnológicas Sob Demanda</h3>
+        <p><strong>Nossos Principais Serviços</strong></p>
+      </div>
+
+      <!-- Itens de serviços -->
+      <div class="row text-center justify-content-center">
+        
+        <!-- Item 1 -->
+        <div class="col-md-3 feature-box works hidden-on-load">
+          <h5>Suporte Técnico Instantâneo</h5>
+          <div class="serviceIcon"> <img src="./src/assets/icons/manufacturing.svg"> </div>
+          <p>Resolução rápida e precisa de problemas, mantendo seu negócio sempre em movimento.</p>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col-md-3 feature-box works hidden-on-load">
+          <h5>Consultoria Avançada</h5>
+          <div class="serviceIcon"> <img src="./src/assets/icons/data_table.svg"> </div>
+          <p>Otimize sua infraestrutura com nossa expertise de 25 anos, incluindo mapeamento detalhado e soluções customizadas para servidores.</p>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="col-md-3 feature-box works hidden-on-load">
+          <h5>Firewall de Última Geração</h5>
+          <div class="serviceIcon"> <img src="./src/assets/icons/encrypted.svg"> </div>
+          <p>Blindagem robusta contra ameaças cibernéticas, garantindo a segurança dos seus dados críticos.</p>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="col-md-3 feature-box works hidden-on-load">
+          <h5>VPN e Rede Segura</h5>
+          <div class="serviceIcon"> <img src="./src/assets/icons/vpn_lock_2.svg"> </div>
+          <p>Conexões confiáveis e protegidas, permitindo trabalho remoto eficiente de qualquer lugar do mundo .</p>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="col-md-3 feature-box works hidden-on-load">
+          <h5>Instalação de Softwares</h5>
+          <div class="serviceIcon"> <img src="./src/assets/icons/install_desktop.svg"> </div>
+          <p>Implementação se complicações de ferramentas essenciais, alinhadas às necessidade sespecíficas do seu negócio.</p>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="col-md-3 feature-box works hidden-on-load">
+          <h5>Mapeamento de Soluções</h5>
+          <div class="serviceIcon"> <img src="./src/assets/icons/account_tree.svg"> </div>
+          <p>Análise detalhada e otimização da sua infraestrutura de servidores, maximizando desempenho e eficiência.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Carrosel -->
+    <div class="container-carousel">
+      <div id="carouselTR" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner text-center">
+          <div class="carousel-item active">
+            <img src="./src/assets/img/banner1.svg" class="d-block mx-auto img-desktop" alt="Avaliação 1">
+            <img src="./src/assets/img/banner1M.svg" class="d-none mx-auto img-mobile" alt="Avaliação 1">
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/img/banner2.svg" class="d-block mx-auto img-desktop" alt="Avaliação 1">
+            <img src="./src/assets/img/banner2M.svg" class="d-none mx-auto img-mobile" alt="Avaliação 1">
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/img/banner3.svg" class="d-block mx-auto img-desktop" alt="Avaliação 1">
+            <img src="./src/assets/img/banner3M.svg" class="d-none mx-auto img-mobile" alt="Avaliação 1">
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/img/banner4.svg" class="d-block mx-auto img-desktop" alt="Avaliação 1">
+            <img src="./src/assets/img/banner4M.svg" class="d-none mx-auto img-mobile" alt="Avaliação 1">
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/img/banner5.svg" class="d-block mx-auto img-desktop" alt="Avaliação 1">
+            <img src="./src/assets/img/banner5M.svg" class="d-none mx-auto img-mobile" alt="Avaliação 1">
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/img/banner6.svg" class="d-block mx-auto img-desktop" alt="Avaliação 1">
+            <img src="./src/assets/img/banner6M.svg" class="d-none mx-auto img-mobile" alt="Avaliação 1">
+          </div>
+        </div>
+
+        <div class="carousel-counter">
+          <span class="current-slide">1</span> / <span class="total-slides">6</span>
+        </div>
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselTR" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#carouselTR" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#carouselTR" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#carouselTR" data-bs-slide-to="3"></button>
+          <button type="button" data-bs-target="#carouselTR" data-bs-slide-to="4"></button>
+          <button type="button" data-bs-target="#carouselTR" data-bs-slide-to="5"></button>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTR" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselTR" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
       </div>
     </div>
-  </section>
 
-  <!-- Seção de contato -->
-  <section class="contact-section container" id="contato">
-    <div class="section-title">
-      <h3>Contato</h3>
+    <!-- Seção em vermelho -->
+    <section  id="trsquad-red">
+      <div class="red-section">
+        <div class="row">
+          <div class="col-xl-3">
+            <h3>Na TR Squad, tecnologia é a ferramenta — seu sucesso é o nosso propósito.</h3>
+          </div>
+          <div class="col-xl-9">
+            <h5>Somos parceiros dedicados ao seu sucesso. Nossas soluções são impulsionadas pela inovação e pela inteligência artificial, permitindo-nos adaptar e evoluir conforme suas necessidades.</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção TR Squad -->
+    <section class="trsquad">
+      <div class="row justify-content-center">
+
+        <!-- Imagem -->
+        <div class="col-lg-4 col-md-4">
+          <img class="trsquad-img" src="./src/assets/img/Rectangle 9.svg">
+        </div>
+
+        <!-- Texto -->
+        <div class="col-lg-8 col-md-8">
+          <p>Na TR Squad, transformamos desafios tecnológicos em oportunidades de crescimento. Nossa equipe altamente qualificada está sempre ao seu alcance, oferecendo suporte sob demanda e soluções inovadoras que acompanham o ritmo acelerado do seu negócio. Escolha a TR Squad para um parceiro tecnológico que não apenas resolve problemas, mas impulsiona sua empresa para o futuro. Com nossa abordagem ágil e personalizada, garantimos que você esteja sempre um passo à frente no mundo digital.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de contato -->
+    <section  id="contato" class="contact-section container">
+
+      <!-- Título -->
+      <div class="section-title">
+        <h3>Contato</h3>
+      </div>
 
       <!-- Links de redes sociais -->
       <div class="row text-center justify-content-center">
 
-        <!-- WhatsApp -->
-        <p class="col-md-3 contact whats">
-          <a href="https://wa.me/551151168172" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-whatsapp icon"></i> WhatsApp 
-            <br> (11) 5116-8172
-          </a>
-        </p>
+          <!-- WhatsApp -->
+          <p class="col-xl-2 col-lg-3 col-4 contact whats">
+            <a href="https://wa.me/551151168172" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-whatsapp icon"></i> WhatsApp 
+              <br> (11) 5116-8172
+            </a>
+          </p>
 
-        <!-- Instagram -->
-        <p class="col-md-3 contact insta">
-          <a href="https://www.instagram.com/trsquad_br" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-instagram icon"></i> Instagram
-            <br> @trsquad_br
-          </a>  
-        </p>
+          <!-- Instagram -->
+          <p class="col-xl-2 col-lg-3 col-4 contact insta">
+            <a href="https://www.instagram.com/trsquad_br" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram icon"></i> Instagram
+              <br> @trsquad_br
+            </a>  
+          </p>
       </div>
-    </div>
 
-    <!-- Formulario de contato -->
-    <div class="row justify-content-center" id="form-contato">
-      <div class="col-lg-8">
-        <form class="form">
-          <div class="row">
-            <div class="col-md-4">
-              <input type="text" class="form-control" placeholder="Nome ou Empresa">
-            </div>
-            <div class="col-md-4">
-              <input type="email" class="form-control" placeholder="E-mail">
-            </div>
-            <div class="col-md-4">
-              <input type="tel" class="form-control" placeholder="Celular">
-            </div>
-          </div>
-          <div class="row mt-3">
-            <div class="col-12">
-              <textarea class="form-control" rows="4" placeholder="Mensagem"></textarea>
-            </div>
-          </div>
-          <div class="mt-3">
-            <button class="btn btn-danger">Enviar <i class="fas fa-paper-plane"></i></button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
+      <!-- Formulário -->
+      <div class="container py-5">
+        <div class="row justify-content-center" id="form-section">
+            <div class="col-lg-8">
+                <form action="processar_formulario.php" method="POST" id="form-contato" class="form">
+                    <div class="row">
 
-  <!-- Modal de confirmação -->
-  <div id="formModal" class="modal fade" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content text-center p-4">
-          <h5 class="modal-title">Mensagem enviada com sucesso!</h5>
-          <p>Entraremos em contato em breve.</p>
-          <button type="button" class="btn btn-primary mt-2" data-bs-dismiss="modal">Fechar</button>
+                        <div class="col-md-4">
+                            <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome ou Empresa" data-error="Digite seu nome completo ou da sua empresa." required>
+                        </div>
+
+                        <div class="col-md-4">
+                            <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" data-error="Digite um e-mail válido." required>
+                        </div>
+
+                        <div class="col-md-4">
+                            <input type="tel" id="celular" name="celular" class="form-control" placeholder="Celular (XX) 9XXXX-XXXX" maxlength="16" data-error="Digite um número válido." required>
+                            <span id="celular-error" class="error-message" style="color: red; display: none;"></span>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <textarea id="mensagem" name="mensagem" class="form-control" rows="4" placeholder="Mensagem" data-error="Escreva uma mensagem." required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-danger" id="btn-enviar">
+                            <span class="spinner-border spinner-border-sm me-2 d-none" role="status" aria-hidden="true"></span>
+                            <span>Enviar <i class="fas fa-paper-plane"></i></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
       </div>
-  </div>
+    </section>
 
-  <!-- Footer da página -->
-  <footer class="container-fluid">
-    <p><a>Política de Privacidade e Cookies</a></p>
-    <p>&copy; 2024 TR Squad - TECNOLOGIA RENOVADA SERVIÇOS EM TI LTDA</p>
-  </footer>
-</body>
+    <!-- Modal de confirmação -->
+    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content shadow-lg">
+          <div class="modal-header">
+            <h5 class="modal-title" id="formModalLabel">Mensagem enviada!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <i class="fa-solid fa-check-double"></i>
+            <p class="mb-0">Obrigado pelo contato. Retornaremos em breve.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer da página -->
+    <footer class="container-fluid">
+      <p><a>Política de Privacidade e Cookies</a></p>
+      <p>&copy; 2025 TR Squad - TECNOLOGIA RENOVADA SERVIÇOS EM TI LTDA</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./src/script/effects.js"></script>
+    <script src="./src/script/carousel.js"></script>
+    <script src="./src/script/formHandler.js"></script>
+    
+  </body>
 </html>
