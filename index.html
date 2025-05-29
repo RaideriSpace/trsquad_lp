@@ -3,38 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>TR Squad - Tecnologia Renovada</title>
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="./src/styles/style.css">
+
+  <script src="/src/script/modal.js"></script>
+
 </head>
 <body>
 
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="/src/assets/img/Logo.svg" alt="Logo Tecnologia Renovada">
-    </a>
+    <div class="container-fluid">
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="/src/assets/img/Logo.svg" alt="Logo Tecnologia Renovada">
+      </a>
 
-    <div class="collapse navbar-collapse" id="navbarContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="#">TR Squad</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Diferencial</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Serviços</a></li>
-        <li class="nav-item"><a class="btn btn-danger" href="#">Contato</a></li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://wa.me/551151168172" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp whatsapp-header"></i></a>
-        </li>
-      </ul>
+      <!-- Botão hamburguer -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Botões de ação -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#trsquad-red">TR Squad</a></li>
+          <li class="nav-item"><a class="nav-link" href="#diferencial">Diferencial</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li class="nav-item"><a class="btn btn-danger" href="#contato">Contato</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://wa.me/551151168172" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp whatsapp-header"></i></a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
+  <!-- Seção da hero img -->
   <section class="hero">
     <div class="container hero-container">
       <h1> Suporte Técnico instantâneo</h1>
@@ -42,35 +53,52 @@
       <p> Cansado de esperar horas por ajuda técnica? <br>
         A TR Squad traz o suporte para perto de você. Com nossa equipe altamente qualificada, oferecemos assistência imediata e <br> 
         personalizada para suas necessidades tecnológicas.</p>
+
+      <!-- CTA -->
       <a href="#" class="btn btn-danger">Resolva Seu Problema Hoje</a>
     </div>
   </section>
 
-  <section class="container">
+  <!-- Seção de diferencial -->
+  <section class="container" id="diferencial">
     <div class="section-title">
       <h3>Por que Escolher a TR Squad?</h3>
     </div>
+
+    <!-- Itens de diferencial -->
     <div class="row text-center justify-content-center">
+
+      <!-- Item 1 -->
       <div class="col-md-3 feature-box">
         <strong class="text-red">Proximidade e Agilidade</strong>
         <p>Suporte técnico instantâneo  ao seu alcance, pronto para atender suas necessidades no momento exato.</p>
       </div>
+
+      <!-- Item 2 -->
       <div class="col-md-3 feature-box">
         <strong class="text-red">Eficiência Sob Demanda</strong>
         <p>Resolvemos seus desafios tecnológicos com rapidez e precisão, minimizando o tempo de inatividade.</p>
       </div>
+
+      <!-- Item 3 -->
       <div class="col-md-3 feature-box">
         <strong class="text-red">Experiência Comprovada</strong>
         <p>Com 25 anos no mercado, oferecemos soluções personalizadas e eficientes que acompanham o ritmo do seu negócio.</p>
       </div>
+
+      <!-- Item 4 -->
       <div class="col-md-3 feature-box">
         <strong class="text-red">Confiança e Transparência</strong>
         <p>Construímos relacionamentos sólidos através de comunicação clara e aberta em todas as etapas.</p>
       </div>
+
+      <!-- Item 5 -->
       <div class="col-md-3 feature-box">
         <strong class="text-red">Inovação Constante</strong>
         <p>Transformamos problemas em oportunidades, mantendo sua empresa sempre um passo à frente.</p>
       </div>
+
+      <!-- Item 6 -->
       <div class="col-md-3 feature-box">
         <strong class="text-red">Comprometimento</strong>
         <p>Atuamos com integridade e responsabilidade, garantindo soluções que respeitam seus valores e objetivos.</p>
@@ -78,76 +106,111 @@
     </div>
   </section>
   
+  <!-- Imagem de quebra -->
   <img class="centerImg" src="./src/assets/img/Imagem.svg" alt="Imagem de Centro">
 
-
-  <section class="container">
+  <!-- Seção de serviços -->
+  <section class="container" id="servicos">
     <div class="section-title">
       <h3>Soluções Tecnológicas Sob Demanda</h3>
       <p><strong>Nossos Principais Serviços</strong></p>
     </div>
-    <div class="row text-center justify-content-center">
 
+    <!-- Itens de serviços -->
+    <div class="row text-center justify-content-center">
+      
+      <!-- Item 1 -->
       <div class="col-md-3 feature-box works">
         <h5>Suporte Técnico Instantâneo</h5>
-        <div class="serviceIcon"> <img src="./src/assets/img/icons/manufacturing.svg"> </div>
+        <div class="serviceIcon"> <img src="./src/assets/icons/manufacturing.svg"> </div>
         <p>Resolução rápida e precisa de problemas, mantendo seu negócio sempre em movimento.</p>
       </div>
 
+      <!-- Item 2 -->
       <div class="col-md-3 feature-box works">
         <h5>Consultoria Avançada</h5>
-        <div class="serviceIcon"> <img src="./src/assets/img/icons/data_table.svg"> </div>
+        <div class="serviceIcon"> <img src="./src/assets/icons/data_table.svg"> </div>
         <p>Otimize sua infraestrutura com nossa expertise de 25 anos, incluindo mapeamento detalhado e soluções customizadas para servidores.</p>
       </div>
 
+      <!-- Item 3 -->
       <div class="col-md-3 feature-box works">
         <h5>Firewall de Última Geração</h5>
-        <div class="serviceIcon"> <img src="./src/assets/img/icons/encrypted.svg"> </div>
+        <div class="serviceIcon"> <img src="./src/assets/icons/encrypted.svg"> </div>
         <p>Blindagem robusta contra ameaças cibernéticas, garantindo a segurança dos seus dados críticos.</p>
       </div>
 
+      <!-- Item 4 -->
       <div class="col-md-3 feature-box works">
         <h5>VPN e Rede Segura</h5>
-        <div class="serviceIcon"> <img src="./src/assets/img/icons/vpn_lock_2.svg"> </div>
+        <div class="serviceIcon"> <img src="./src/assets/icons/vpn_lock_2.svg"> </div>
         <p>Conexões confiáveis e protegidas, permitindo trabalho remoto eficiente de qualquer lugar do mundo .</p>
       </div>
 
+      <!-- Item 5 -->
       <div class="col-md-3 feature-box works">
         <h5>Instalação de Softwares</h5>
-        <div class="serviceIcon"> <img src="./src/assets/img/icons/install_desktop.svg"> </div>
+        <div class="serviceIcon"> <img src="./src/assets/icons/install_desktop.svg"> </div>
         <p>Implementação se complicações de ferramentas essenciais, alinhadas às necessidade sespecíficas do seu negócio.</p>
       </div>
 
+      <!-- Item 6 -->
       <div class="col-md-3 feature-box works">
         <h5>Mapeamento de Soluções</h5>
-        <div class="serviceIcon"> <img src="./src/assets/img/icons/account_tree.svg"> </div>
+        <div class="serviceIcon"> <img src="./src/assets/icons/account_tree.svg"> </div>
         <p>Análise detalhada e otimização da sua infraestrutura de servidores, maximizando desempenho e eficiência.</p>
       </div>
 
     </div>
   </section>
-
-  <section class="red-section">
-    <div class="row">
-      <div class="col-xl-3">
-        <h3>Na TR Squad, tecnologia é a ferramenta — seu sucesso é o nosso propósito.</h3>
-      </div>
-      <div class="col-xl-9">
-        <h5>Somos parceiros dedicados ao seu sucesso. Nossas soluções são impulsionadas pela inovação e pela inteligência artificial, permitindo-nos adaptar e evoluir conforme suas necessidades.</h5>
+  
+  <!-- Seção em vermelho -->
+  <section  id="trsquad-red">
+    <div class="red-section">
+      <div class="row">
+        <div class="col-xl-3">
+          <h3>Na TR Squad, tecnologia é a ferramenta — seu sucesso é o nosso propósito.</h3>
+        </div>
+        <div class="col-xl-9">
+          <h5>Somos parceiros dedicados ao seu sucesso. Nossas soluções são impulsionadas pela inovação e pela inteligência artificial, permitindo-nos adaptar e evoluir conforme suas necessidades.</h5>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="contact-section container">
+  <!-- Seção TR Squad -->
+  <section class="trsquad">
+    <div class="row justify-content-center">
+
+      <!-- Imagem -->
+      <div class="col-lg-4 col-md-4">
+        <img class="trsquad-img" src="./src/assets/img/Rectangle 9.svg">
+      </div>
+
+      <!-- Texto -->
+      <div class="col-lg-8 col-md-8">
+        <p>Na TR Squad, transformamos desafios tecnológicos em oportunidades de crescimento. Nossa equipe altamente qualificada está sempre ao seu alcance, oferecendo suporte sob demanda e soluções inovadoras que acompanham o ritmo acelerado do seu negócio. Escolha a TR Squad para um parceiro tecnológico que não apenas resolve problemas, mas impulsiona sua empresa para o futuro. Com nossa abordagem ágil e personalizada, garantimos que você esteja sempre um passo à frente no mundo digital.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de contato -->
+  <section class="contact-section container" id="contato">
     <div class="section-title">
       <h3>Contato</h3>
+
+      <!-- Links de redes sociais -->
       <div class="row text-center justify-content-center">
+
+        <!-- WhatsApp -->
         <p class="col-md-3 contact whats">
           <a href="https://wa.me/551151168172" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-whatsapp icon"></i> WhatsApp 
             <br> (11) 5116-8172
           </a>
         </p>
+
+        <!-- Instagram -->
         <p class="col-md-3 contact insta">
           <a href="https://www.instagram.com/trsquad_br" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-instagram icon"></i> Instagram
@@ -156,7 +219,9 @@
         </p>
       </div>
     </div>
-    <div class="row justify-content-center">
+
+    <!-- Formulario de contato -->
+    <div class="row justify-content-center" id="form-contato">
       <div class="col-lg-8">
         <form class="form">
           <div class="row">
@@ -183,6 +248,18 @@
     </div>
   </section>
 
+  <!-- Modal de confirmação -->
+  <div id="formModal" class="modal fade" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center p-4">
+          <h5 class="modal-title">Mensagem enviada com sucesso!</h5>
+          <p>Entraremos em contato em breve.</p>
+          <button type="button" class="btn btn-primary mt-2" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+  </div>
+
+  <!-- Footer da página -->
   <footer class="container-fluid">
     <p><a>Política de Privacidade e Cookies</a></p>
     <p>&copy; 2024 TR Squad - TECNOLOGIA RENOVADA SERVIÇOS EM TI LTDA</p>
