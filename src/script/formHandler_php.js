@@ -1,4 +1,4 @@
-// Script para formulário
+// Script para formulário com envio ao php
 document.addEventListener("DOMContentLoaded", function () {
 
     // Referências aos elementos do formulário e modal
@@ -25,7 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const celularErrorSpan = document.getElementById('celular-error');
 
     // Regex para validar número de celular brasileiro comum (9 dígitos, opcional DDD e +55)
-    const regexCelular = /^(\+?55)?\s*(\(?\d{2}\)?\s*)?(9\d{4}[-\s]?\d{4})$/;
+    const regexCelular = /^\+?(\d{2})?\s*(\(?\d{2}\)?)?\s*9?\s*\d{4}[-\s]?\d{4}$/;
+
 
     // --- Função de validação específica para o campo de celular ---
     function validateCelular() {
@@ -86,21 +87,19 @@ document.addEventListener("DOMContentLoaded", function () {
         celularInput.classList.remove('is-invalid');
 
 
-        // 2. Validar campos vazios
+        // 2. Validar campos vazios (incluindo o email que não estava explicitamente no PHP original, mas está no HTML)
         inputs.forEach((input) => {
-            if (input.id === 'celular' || !input.hasAttribute('required')) { 
-                 return;
-            }
+            // Verifica se o campo é requerido (excluindo celular que tem validação própria)
+            if (input.hasAttribute('required') && input.id !== 'celular') { 
+                if (!input.value.trim()) {
+                    valido = false;
+                    input.classList.add("is-invalid"); // Adiciona classe de erro do Bootstrap
 
-            if (!input.value.trim()) {
-                valido = false;
-                input.classList.add("is-invalid"); // Adiciona classe de erro do Bootstrap
-
-                const msg = document.createElement("div");
-                msg.className = "invalid-feedback"; // Classe do Bootstrap para feedback de erro
-                // Mensagem de erro padrão ou via data-attribute
-                msg.textContent = input.dataset.error || `O campo '${input.placeholder || input.name}' é obrigatório.`;
-                input.insertAdjacentElement("afterend", msg); // Insere a mensagem após o input
+                    const msg = document.createElement("div");
+                    msg.className = "invalid-feedback"; // Classe do Bootstrap para feedback de erro
+                    msg.textContent = input.dataset.error || `O campo '${input.placeholder || input.name}' é obrigatório.`;
+                    input.insertAdjacentElement("afterend", msg); // Insere a mensagem após o input
+                }
             }
         });
 
@@ -129,18 +128,49 @@ document.addEventListener("DOMContentLoaded", function () {
             button.setAttribute("disabled", true); // Desabilita o botão
         }
 
-        // Simular envio (substituir isso pelo envio real para um servidor, se necessário)
-        setTimeout(() => {
-            form.reset(); // Limpa o formulário
+        // Criar um FormData para enviar os dados
+        const formData = new FormData(form);
+
+        // Enviar os dados usando fetch API (ou $.ajax do jQuery)
+        fetch(form.action, { // form.action é 'processar_formulario.php'
+            method: form.method, // form.method é 'POST'
+            body: formData,
+        })
+        .then(response => {
+            // Verifica se a resposta HTTP é OK (2xx) ou se houve erro
+            if (!response.ok) {
+                // Se a resposta não for OK, lança um erro com a mensagem do backend
+                return response.json().then(errorData => {
+                    throw new Error(errorData.message || 'Ocorreu um erro no servidor.');
+                });
+            }
+            return response.json(); // Retorna os dados JSON da resposta
+        })
+        .then(data => {
+            // Tratar a resposta JSON do PHP
+            if (data.success) {
+                form.reset(); // Limpa o formulário
+                if (modal) {
+                    modal.show(); // Exibe o modal de sucesso do Bootstrap
+                }
+            } else {
+                // Se 'success' for falso na resposta JSON
+                alert(data.message || 'Ocorreu um erro ao enviar a mensagem.');
+            }
+        })
+        .catch(error => {
+            // Tratar erros de rede ou erros lançados pelo .then(response => ...)
+            console.error('Erro no envio do formulário:', error);
+            alert('Falha ao enviar a mensagem: ' + error.message);
+        })
+        .finally(() => {
+            // Esconder loading e habilitar botão, independentemente do sucesso ou falha
             if (spinner) {
-                spinner.classList.add("d-none"); // Esconde o spinner
+                spinner.classList.add("d-none");
             }
             if (button) {
-                button.removeAttribute("disabled"); // Habilita o botão
+                button.removeAttribute("disabled");
             }
-            if (modal) {
-                modal.show(); // Exibe o modal de sucesso do Bootstrap
-            }
-        }, 2000); // Simula um atraso de 2 segundos para o envio
+        });
     });
 });
