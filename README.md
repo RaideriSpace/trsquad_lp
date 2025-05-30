@@ -12,21 +12,24 @@ A TR Squad oferece suporte técnico ágil e personalizado, consultoria avançada
 
 O projeto segue uma estrutura de pastas organizada para facilitar a manutenção e o desenvolvimento:
 
-.
-├── src/
-│   ├── assets/
-│   │   ├── icons/  (Ícones SVG utilizados no site)
-│   │   └── img/    (Imagens e logotipos do site)
-│   ├── script/
-│   │   ├── carousel.js         (Lógica para o carrossel de avaliações)
-│   │   ├── effects.js          (Efeitos visuais como parallax e animações de scroll)
-│   │   ├── formHandler_local.js (Simulação de envio de formulário para desenvolvimento local)
-│   │   └── formHandler_php.js   (Lógica de envio de formulário via PHP para ambiente real)
-│   └── styles/
-│       └── style.css           (Folha de estilos principal do site)
-├── .gitignore                  (Define quais arquivos e pastas o Git deve ignorar)
-├── index.html                  (Página principal do site)
-└── processar_formulario.php    (Script PHP para processamento do formulário de contato)
+
+    .
+    ├── src/
+    │   ├── assets/             # Imagens e icones
+    │   │   ├── icons/
+    │   │   └── img/
+    │   ├── script/           # Scripts js utilizados no site para animações e efeitos
+    │   │   ├── carousel.js            (Lógica para o carrossel de avaliações)
+    │   │   ├── effects.js             (Efeitos visuais como parallax e animações de scroll)
+    │   │   ├── formHandler_local.js   (Simulação de envio de formulário para desenvolvimento local)
+    │   │   └── formHandler_php.js     (Lógica de envio de formulário via PHP para ambiente real)
+    │   ├── styles/               # folha de estilo CSS
+    │   │   └── style.css
+    ├── .gitignore                 # Arquivos e pastas a serem ignorados pelo Git
+    ├── index.html                 # Arquivo HTML principal
+    ├── processar_formulario.php   # Script PHP para processamento do formulário de contato
+    └── README.md                  # Este arquivo!
+    
 
 ## Tecnologias Utilizadas
 
